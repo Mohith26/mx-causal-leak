@@ -13,7 +13,7 @@ I implemented fake-quantized MXFP4 (E2M1 grid, one scale per 32 elements, either
 | | float | leaky | fixed |
 |---|---|---|---|
 | max change in outputs at positions <= i when only positions > i change (T=256, d=64) | 0 | 1.37 | 0 |
-| outputs at positions 0-30 that change when position 31 gets a 6x value outlier | 0% | 100% | 0% |
+| outputs at positions 0-30 that change when position 31 gets a 6x value outlier (T=64, d=32, 300 random sequences) | 0% | 100% | 0% |
 | median relative change of those outputs | 0% | 16.9% | 0% |
 
 (`amax / 6` scales; the OCP power-of-two scale gives 1.06, 100% and 16.1%.)
